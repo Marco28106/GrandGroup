@@ -16,6 +16,12 @@ export const BRANCHES = [
   { name: "Multi Cipta Teknik", addr: "Jl. W. Maramis, Manado", hours: "Senin–Sabtu 08.00–19.00", maps: "https://maps.app.goo.gl/ZvK86fn2z8gsGXZB7", tag: "Teknik" },
 ] as const;
 
+export const CONTACT = {
+  email: "info@grandgroup-manado.com",
+  wa: "6281234567890",
+  waDisplay: "+62 812-3456-7890",
+} as const;
+
 export const DIVISI = [
   { title: "Konstruksi & Material Finishing", items: [
     { name: "Bahan Bangunan", desc: "Material dasar dan penyelesaian berkualitas tinggi untuk konstruksi kokoh dan tahan lama." },
@@ -40,10 +46,9 @@ export const DIVISI = [
 ] as const;
 
 export const PRODUCTS = [
-  { brand: "Wipro", cat: "Power Tools", count: "120+ produk" },
-  { brand: "Loncin", cat: "Engine & Genset", count: "80+ produk" },
-  { brand: "Panasonic", cat: "Elektrikal", count: "200+ produk" },
-  { brand: "Germany Brilliant", cat: "Sanitary", count: "90+ produk" },
-  { brand: "Steel Horse", cat: "Safety Shoes", count: "45+ produk" },
-  { brand: "Tajima • Bosch • Makita", cat: "Handtools", count: "300+ produk" },
+  { brand: "Wipro", cat: "Power Tools", count: "120+ produk", img: "/wipro.jpg" },
+  { brand: "Loncin", cat: "Engine & Genset", count: "80+ produk", img: "/loncin.jpg" },
+  { brand: "Germany Brilliant", cat: "Sanitary", count: "90+ produk", img: "/germany-brilliant.png" },
+  { brand: "Steel Horse", cat: "Safety Shoes", count: "45+ produk", img: "/steel-horse.jpg" },
+  { brand: "Bosch", cat: "Handtools", count: "300+ produk", img: "/bosch.jpg" },
 ] as const;
