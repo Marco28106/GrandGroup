@@ -7,13 +7,13 @@ export const NAV = [
 ] as const;
 
 export const BRANCHES = [
-  { name: "Grand Prima Home & Work", addr: "Kompleks Monaco Bay, Jl. Piere Tendean No.1 Blok A, Manado", hours: "Senin–Sabtu 08.30–20.30 | Minggu 10.30–20.30", maps: "https://maps.google.com/?q=Monaco+Bay+Manado", tag: "Flagship" },
-  { name: "Grand Prima Home & Living", addr: "Pinaesaan, Wenang, Manado City", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.google.com/?q=Pinaesaan+Wenang+Manado", tag: "Home & Living" },
-  { name: "Grand Hardware ITC Marina", addr: "Kompleks ITC Marina Plaza, Blok B7, Manado", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.google.com/?q=ITC+Marina+Plaza+Manado", tag: "Hardware" },
-  { name: "Grand Hardware Malalayang", addr: "Jl. Wolter Monginsidi No.58, Malalayang Satu, Manado", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.google.com/?q=Wolter+Monginsidi+Manado", tag: "Hardware" },
-  { name: "Grand Hardware Airmadidi", addr: "Sarongsong I, Airmadidi — Minahasa Utara", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.google.com/?q=Airmadidi+Minahasa+Utara", tag: "Hardware" },
-  { name: "Grand Hardware Bitung", addr: "Jl. Raya Manado–Bitung, Girian Weru Dua", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.google.com/?q=Girian+Weru+Bitung", tag: "Hardware" },
-  { name: "Multi Cipta Teknik", addr: "Jl. W. Maramis, Manado", hours: "Senin–Sabtu 08.00–19.00", maps: "https://maps.google.com/?q=Jl+W+Marmis+Manado", tag: "Teknik" },
+  { name: "Grand Prima Home & Work", addr: "Kompleks Monaco Bay, Jl. Piere Tendean No.1 Blok A, Manado", hours: "Senin–Sabtu 08.30–20.30 | Minggu 10.30–20.30", maps: "https://maps.app.goo.gl/LciyvoBQqZv6GDzY7", tag: "Flagship" },
+  { name: "Grand Prima Home & Living", addr: "Pinaesaan, Wenang, Manado City", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.app.goo.gl/86d2z4vk21VrvjHx5", tag: "Home & Living" },
+  { name: "Grand Hardware ITC Marina", addr: "Kompleks ITC Marina Plaza, Blok B7, Manado", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.app.goo.gl/ugVcAHs66abZJdqSA", tag: "Hardware" },
+  { name: "Grand Hardware Malalayang", addr: "Jl. Wolter Monginsidi No.58, Malalayang Satu, Manado", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.app.goo.gl/W9CA1SRYxGY4d4bG9", tag: "Hardware" },
+  { name: "Grand Hardware Airmadidi", addr: "Sarongsong I, Airmadidi — Minahasa Utara", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.app.goo.gl/XkjfhCKNk1bRMMnB9", tag: "Hardware" },
+  { name: "Grand Hardware Bitung", addr: "Jl. Raya Manado–Bitung, Girian Weru Dua", hours: "Senin–Sabtu 08.30–20.30", maps: "https://maps.app.goo.gl/msaLEzqdnbGpMwbj7", tag: "Hardware" },
+  { name: "Multi Cipta Teknik", addr: "Jl. W. Maramis, Manado", hours: "Senin–Sabtu 08.00–19.00", maps: "https://maps.app.goo.gl/ZvK86fn2z8gsGXZB7", tag: "Teknik" },
 ] as const;
 
 export const DIVISI = [

@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 const config: Config = {
+  darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
@@ -16,7 +17,7 @@ const config: Config = {
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
       },
       borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 4px)", sm: "calc(var(--radius) - 8px)" },
-      fontFamily: { sans: ["var(--font-inter)"], display: ["var(--font-poppins)"] },
+      fontFamily: { sans: ["var(--font-body)"], display: ["var(--font-display)"] },
     },
   },
   plugins: [],

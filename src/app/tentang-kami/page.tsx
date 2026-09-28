@@ -1,6 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
-import { Blocks, Hammer, Droplets, ChefHat, Sofa, ShieldCheck, Sparkles } from "lucide-react";
+import { Blocks, Hammer, Droplets, ChefHat, Sofa } from "lucide-react";
 import { DIVISI } from "@/lib/data";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 const ICONS = [Blocks, Hammer, Droplets, ChefHat, Sofa] as const;
@@ -8,42 +8,47 @@ export default function TentangKami() {
   const reduce = useReducedMotion();
   return (
     <div>
-      <section className="relative overflow-hidden bg-primary border-b">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#14307a] to-[#0a1850]" />
-        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/20 blur-[60px]" aria-hidden />
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 py-10 sm:py-14 relative">
-          <motion.span initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-bold text-primary"><Sparkles className="h-3.5 w-3.5 text-accent" /> Tentang Grand Group</motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.5 }} className="mt-3 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Tentang Kami</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.18, duration: 0.5 }} className="mt-3 max-w-3xl text-sm sm:text-[15px] leading-relaxed text-white/80">Di Grand Grup, kami memahami bahwa setiap proyek — baik skala rumah tangga maupun industri — membutuhkan fondasi dan perlengkapan berkualitas tinggi. Sebagai ritel modern yang terus bertumbuh, kami menghadirkan ribuan produk pilihan yang terorganisir dalam departemen khusus untuk memudahkan Anda menemukan solusi tepat di setiap lantai toko kami.</motion.p>
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.28, duration: 0.5 }} className="mt-6 overflow-hidden rounded-[24px] bg-white p-2 shadow-xl"><img src="https://picsum.photos/seed/grand-tentang/1280/520" alt="Interior toko Grand Group dummy" width={1280} height={520} className="h-[220px] sm:h-[340px] w-full object-cover rounded-[18px]" /></motion.div>
+      <section className="relative overflow-hidden border-b bg-card">
+        <div className="pointer-events-none absolute inset-0 paper-grid opacity-[0.32]" aria-hidden />
+        <div className="relative mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
+          <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="hairline text-[11px] font-semibold text-accent">TENTANG KAMI</motion.p>
+          <motion.h1 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.06, duration: 0.6 }} className="mt-3 text-3xl font-semibold leading-[0.98] tracking-tight sm:text-[46px]">
+            Setiap proyek
+            <br />
+            <span className="font-normal italic">berhak mendapat yang terbaik.</span>
+          </motion.h1>
+          <div className="mt-5 h-px w-14 bg-accent/50" aria-hidden />
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.14, duration: 0.6 }} className="mt-5 max-w-3xl text-[15px] leading-7 text-muted-foreground">
+            Di Grand Grup, setiap proyek — rumah tangga maupun industri — membutuhkan fondasi dan perlengkapan berkualitas tinggi. Ribuan produk terkurasi, tertata rapi per lantai, untuk membantu Anda menemukan solusi yang tepat tanpa repot.
+          </motion.p>
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.24, duration: 0.6 }} className="mt-8 overflow-hidden rounded-[28px] border bg-card p-2 shadow-sm">
+            <img src="https://picsum.photos/seed/grand-tentang/1280/520" alt="Interior toko Grand Group" width={1280} height={520} className="h-[240px] w-full rounded-[20px] object-cover sm:h-[360px]" />
+          </motion.div>
         </div>
       </section>
-      <section className="mx-auto max-w-[1280px] px-4 sm:px-6 py-10 sm:py-12">
-        <Reveal className="flex items-center gap-3 mb-6">
-          <span className="h-1 w-10 rounded-full bg-accent" aria-hidden />
-          <h2 className="font-display text-lg font-bold">5 Divisi Unggulan — Lantai 1 sampai 3</h2>
-          <span className="hidden sm:inline-flex rounded-full bg-accent/10 px-2.5 py-1 text-xs font-bold text-accent">One-Stop Solution</span>
+      <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 sm:py-14">
+        <Reveal className="flex items-center gap-3">
+          <span className="h-px w-10 bg-accent/50" aria-hidden />
+          <span className="hairline text-[11px] font-semibold text-accent">5 DIVISI • 3 LANTAI • 7 CABANG</span>
         </Reveal>
-        <Stagger className="grid gap-6 lg:grid-cols-2">
+        <Stagger className="mt-6 grid gap-6 lg:grid-cols-2">
           {DIVISI.map((d, idx) => {
             const Icon = ICONS[idx] ?? Blocks;
-            const isAccent = idx % 2 === 0;
             return (
               <StaggerItem key={d.title}>
-                <motion.div whileHover={{ y: reduce ? 0 : -4 }} transition={{ type: "spring", stiffness: 400, damping: 20 }} className="relative overflow-hidden rounded-[24px] border bg-white p-6 shadow-sm">
-                  <span className={`absolute left-0 top-0 h-1 w-full ${isAccent ? "bg-accent" : "bg-primary"}`} aria-hidden />
-                  <div className="flex items-start gap-3">
-                    <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl text-white shadow-sm ${isAccent ? "bg-accent" : "bg-primary"}`}><Icon className="h-5 w-5" /></span>
+                <motion.div whileHover={{ y: reduce ? 0 : -3 }} transition={{ type: "spring", stiffness: 420, damping: 26 }} className="rounded-[24px] border bg-card p-7 shadow-sm">
+                  <div className="flex items-start gap-4">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground"><Icon className="h-5 w-5" /></span>
                     <div>
-                      <h2 className="font-display text-base font-bold leading-tight">{d.title}</h2>
-                      {"sub" in d && d.sub ? <p className="text-xs font-bold tracking-wide text-accent">{d.sub}</p> : null}
+                      <h2 className="text-[15px] font-semibold leading-tight">{d.title}</h2>
+                      {"sub" in d && d.sub ? <p className="text-xs tracking-wide text-muted-foreground">{d.sub}</p> : null}
                     </div>
                   </div>
-                  <div className="mt-4 grid gap-3">
+                  <div className="mt-5 grid gap-3">
                     {d.items.map((it) => (
-                      <div key={it.name} className="rounded-2xl bg-secondary p-4 ring-1 ring-black/[0.04]">
-                        <p className="text-sm font-bold text-primary">{it.name}</p>
-                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{it.desc}</p>
+                      <div key={it.name} className="rounded-2xl border bg-secondary/60 p-4">
+                        <p className="text-sm font-medium">{it.name}</p>
+                        <p className="mt-1 text-sm leading-6 text-muted-foreground">{it.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -52,11 +57,12 @@ export default function TentangKami() {
             );
           })}
         </Stagger>
-        <Reveal className="mt-8 overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm"><img src="https://picsum.photos/seed/grand-tentang2/1280/400" alt="Produk all floor dummy" width={1280} height={400} className="h-[180px] w-full object-cover rounded-[18px]" /></Reveal>
-        <Reveal className="mt-8 rounded-[24px] bg-primary p-6 sm:p-8 text-white relative overflow-hidden">
-          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/30 blur-2xl" aria-hidden />
-          <p className="relative font-display text-lg font-bold flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-accent" /> Harga PASTI MURAH di setiap lantai</p>
-          <p className="relative mt-1 text-sm text-white/75">Konsultasi gratis di 7 cabang — tim kami bantu pilih produk tepat untuk rumah &amp; proyek Anda.</p>
+        <Reveal className="mt-8 overflow-hidden rounded-[28px] border bg-card p-2 shadow-sm">
+          <img src="https://picsum.photos/seed/grand-tentang2/1280/400" alt="Produk all floor" width={1280} height={400} className="h-[180px] w-full rounded-[20px] object-cover" />
+        </Reveal>
+        <Reveal className="mt-8 rounded-[24px] border bg-card p-6 sm:p-8">
+          <p className="font-display text-lg font-semibold">Butuh bantuan memilih?</p>
+          <p className="mt-1 text-sm leading-6 text-muted-foreground">Tim kami di 7 cabang siap mendampingi — dari material hingga finishing, dengan harga PASTI MURAH.</p>
         </Reveal>
       </section>
     </div>
