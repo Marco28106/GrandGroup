@@ -1,0 +1,36 @@
+
+> grandgroup@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 5s
+ ○ Compiling / ...
+ ✓ Compiled / in 9.5s (1426 modules)
+ GET / 200 in 10226ms
+ GET / 200 in 564ms
+ ○ Compiling /cabang-kami ...
+ ✓ Compiled /cabang-kami in 3.1s (1425 modules)
+ GET /cabang-kami 200 in 4085ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1263ms (1414 modules)
+ GET /_next/static/css/app/layout.css?v=1790571730900 404 in 1815ms
+ GET /_next/static/chunks/main-app.js?v=1790571730900 404 in 1883ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 1883ms
+ ✓ Compiled in 1915ms (705 modules)
+ ✓ Compiled in 1060ms (705 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 969ms (724 modules)
+ GET / 200 in 6508ms
+ GET / 200 in 149ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1341ms (1418 modules)
+ GET /_next/static/css/app/layout.css?v=1790571898891 404 in 1652ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 831ms
+ GET /_next/static/chunks/main-app.js?v=1790571898891 404 in 1116ms
+ GET /_next/static/chunks/app/page.js 404 in 78ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 2.5s (757 modules)
+ GET /favicon.ico 200 in 2754ms
